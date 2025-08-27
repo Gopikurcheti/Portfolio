@@ -29,7 +29,7 @@ background: linear-gradient(to bottom, #5f18d0, #000000); /* W3C, IE 10+/ Edge, 
 
 section{
     width: 100%;
-    height:180vh;
+    height:320vh;
     /* background-image:url(design.jpg); */
     background-size:cover;
     position:relative;
@@ -248,18 +248,7 @@ strong{
 }
 
 
-     /*--------------*\
-        Portfolio
-     \*--------------*/
 
-
-.section-portfolio{
-  display:flex;
-  justify-content:center;
-  text-align:center;
- 
-  
-}
 
       /*------------*\
           Skills
@@ -362,6 +351,290 @@ strong{
 .Skills-logos li:nth-child(11):hover {
   background-color: red !important; /* Just for testing */
 }
+
+
+      /*------------*\
+          Projects
+      \*------------*/
+    
+ 
+
+    .projects-section-container{
+    padding:150px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+   
+   } 
+
+   .project-boxes-div{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 60px;
+    padding: 50px 20px;
+    
+   }
+
+   .cta:hover:before,
+    .project-boxes-wrapper{
+    width:100%;
+   }
+
+    .project-box{
+    width:100%;
+    max-width: 1100px;
+    height:420px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    transition-duration: .3s;
+    border-radius: 30px;
+     overflow: hidden;
+     border: 1px solid var(--tech-stack-box-border-color);
+     
+   
+   }
+
+   .info-div{
+
+    width:50%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    gap:20px;
+    padding:40px;
+
+    
+   }
+
+     .faviconforProject{
+     width:80px;
+     height:60px;
+     margin-bottom: 25px;
+     padding: 8px;
+   }
+ 
+   
+   .projects-section-div{
+       max-width:1400px;
+       margin: 0 auto;
+       position: relative;
+       z-index: 1;
+   }
+
+   .ProjectHeading{
+    color: var(--color-white);
+    font-size: 3.4rem;
+    font-weight: 700
+   }
+
+
+   .section-heading{
+       text-align: center;
+       margin-bottom: 80px;
+   }
+
+   .section-heading-article{
+       font-size: 3.5rem;
+       font-weight: 700;
+       background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom:20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+   }
+
+   .sectionHeadingP{
+      font-size:1.2rem;
+      color:#94a3b8;
+      max-width: 600px;
+      margin:0 auto;
+   }
+
+
+   .projectDescription{
+       font-size: 1.1rem;
+       color: gray;
+       font-weight: 400;
+   }
+
+   .project-buttons{
+    width: 100%;
+    display:flex;
+    align-items:center;
+    flex-direction: flex-start;
+    gap:20px;
+
+   }
+
+    .cta {
+            text-decoration: none;
+            color:#06b6d4;
+            padding: 12px 18px;
+            transition: .2s;
+            border:none;
+            background: 0 0;
+            cursor: pointer;
+            display:flex;
+            align-items:center;
+            justify-content:flex-start;
+         
+        }
+
+         .cta::before {
+            content:"";
+            position:absolute;
+            left:0;
+            display:block;
+            border-radius:50px;
+            background:#2b2f4e;;
+            width: 45px;
+            height:45px;
+            transition: .3s;
+          
+        }
+
+        .cta span{
+          
+          font-size: 1.8rem;
+          font-weight: 600;
+          letter-spacing: .05em;
+         
+          text-decoration:none;
+        }
+
+        .cta svg{
+         
+          top:0;
+          margin-left: 10px;
+          fill:none;
+          stroke-linecap:round;
+          stroke-linejoin:round;
+           stroke: var(--color-light-blue);
+           stroke-width: 2;
+           transform: translateX(-5px);
+            transition: .3s
+        }
+
+        .cta:hover svg{
+           stroke:#06b6d4;
+          
+          transform: translateX(0);
+        }
+
+        .cta:active{
+          transform: scale(.95);
+        }
+
+         .image-div {
+             width:50%;
+             height:100%;
+             padding-top: 70px;
+             padding-left:10px;   
+        }
+          .image-div img {
+            height: 100%;
+            border-top-left-radius:30px; 
+        }
+
+
+        /* Custom projects with different themes */
+        .project-box:nth-child(1) {
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .project-box:nth-child(2) {
+            background: rgba(168, 85, 247, 0.05);
+        }
+
+        .project-box:nth-child(3) {
+            background: rgba(6, 182, 212, 0.05);
+        }
+
+        .project-box:nth-child(4) {
+            background: rgba(34, 197, 94, 0.05);
+        }
+
+.cta,
+.cta span,
+.cta svg,
+.project-box,
+footer {
+    position: relative
+} 
+
+/* .project-box {
+    width: 80%; /* keep it centered and neat *
+    max-width: 1100px; 
+    height: 420px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.info-div {
+    width: 50%;
+    padding: 40px;
+    color: #f1f5f9;
+}
+
+.info-div h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.info-div p {
+    color: #94a3b8;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.image-div {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+
+
+
+
+
+
+
+
 
 
 
