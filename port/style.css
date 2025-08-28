@@ -102,10 +102,59 @@ nav{
     margin-top:0;
 }
 
-.hero-banner img{
-    margin:10px 50px 0 0;
-    width:450px;
+.hero-banner{
+  position:absolute;
+  right:-31.6%;
+  top: 22%;
+  transform: translateY(-50%);
+  z-index:1;
+  pointer-events:none;
+  opacity: 0.9;
+
+
 }
+
+
+.rotating-shield{
+   width: 70vw;
+  height: auto;
+  max-width:800px;
+
+  animation: rotateShield 20s linear infinite, dramaticPulse 4s ease-in-out infinite;
+  filter:
+  drop-shadow(0 0 30px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 40px rgba(255, 215, 0, 0.5));
+
+
+   will-change:transform;
+   backface-visibility:hidden;
+   transform-style:preserve-3d;;
+   transform: translateZ(0);
+    perspective: 1000px;
+
+}
+
+
+@keyframes rotateShield {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { 
+    filter:
+    drop-shadow(0 0 30px rgba(0, 0, 0, 0.5))
+      drop-shadow(0 0 50px rgba(255, 215, 0, 0.5));
+    opacity: 0.6;
+   }
+  50% {
+    filter:
+     drop-shadow(0 0 50px rgba(0, 0, 0, 0.7))
+      drop-shadow(0 0 100px rgba(255, 215, 0, 0.8))
+      drop-shadow(0 0 150px rgba(255, 215, 0, 0.4));
+    opacity: 1; }
+}
+
 
 .villan-text{
     padding:50px 0 0 120px;
@@ -171,7 +220,7 @@ strong{
 }
 .btn{
   font-size:20px;
-  margin:25px 0 0 680px;
+  margin:25px 0 0 510px;
   border-radius:50px;
 }
 .btn:hover{
