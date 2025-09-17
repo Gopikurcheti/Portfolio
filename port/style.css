@@ -14,6 +14,14 @@
    
 }
 
+:target{
+  scroll-margin-top: 140px;
+}
+
+#home, #about, #skills, #projects {
+  scroll-margin-top: 140px;
+}
+
 
       /* body part */
 
@@ -180,7 +188,8 @@ body.dark-mode .CV:hover {
       \*------------- */
 .hero{
     width:100%;
-    height:180vh;
+    height:170vh;
+    top:10vh;
     padding:10px;
     display:flex;
     align-items:stretch;
@@ -192,8 +201,8 @@ body.dark-mode .CV:hover {
 
 .hero-banner{
   position:absolute;
-  right:-30%;
-  top: 35%;
+  right:-50%;
+  top: 45%;
   transform: translateY(-50%);
   z-index:1;
   pointer-events:none;
@@ -202,14 +211,14 @@ body.dark-mode .CV:hover {
 
 
 .rotating-shield{
-   width: 60vw;
+   width: 90vw;
   height: auto;
-  max-width:800px;
+  max-width:900px;
   opacity:0.9;
   animation: rotateShield 20s linear infinite, dramaticPulse 4s ease-in-out infinite;
   filter:
-  drop-shadow(0 0 30px rgba(0, 0, 0, 0.5))
-    drop-shadow(0 0 40px rgba(255, 215, 0, 0.5));
+  drop-shadow(0 0 30px rgba(0, 0, 0, 0.286))
+    drop-shadow(0 0 40px rgba(255, 187, 0, 0.444));
 
 
    will-change:transform;
@@ -888,8 +897,8 @@ footer {
 /* Laptops and Desktops (1024px - 1400px) */
 @media (max-width: 1400px) {
   .hero-banner {
-    right: -31%;
-    top: 36%;
+    right: -35%;
+    top:43%;
   }
   strong {
     font-size: 55px;
@@ -981,4 +990,4 @@ footer {
   .logo {
     margin-left: 0;
   }
-  .nav-bar
+}
