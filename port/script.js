@@ -29,3 +29,28 @@ themeToggle.addEventListener("click", function (e) {
     themeToggle.textContent = "Dark Mode";
   }
 });
+
+
+const sections = document.querySelectorAll(
+  "#hero, #about, #skills, #projects, #contact"
+);
+
+function revealOnScroll() {
+  sections.forEach(section => {
+    if (!section.classList.contains("scroll-reveal")) {
+      section.classList.add("scroll-reveal");
+    }
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+      // in viewport → show
+      section.classList.add("show");
+    } else {
+      // outside viewport → reset
+      section.classList.remove("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();

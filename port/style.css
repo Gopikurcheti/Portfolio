@@ -818,15 +818,94 @@ footer {
            Footer
       \*------------*/
  .footer {
-  background-color: rgb(24, 48, 61);
-  padding-block: 60px;
+ background: #0d0c0e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #69059b, #2e0f4c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #321242, #040008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding-block: 100px;
+  text-align:center;
+  margin-bottom: 30px;
+  color:aliceblue;
+}
+
+.follow-text{
+  font-size: 20px;
+  font-weight: 500;
+   margin-bottom: 20px;
+}
+
+.container-icons{
+  height:80px;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding: 20px 0;
+}
+
+.container-icons a{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:60px;
+  width: 60px;
+  background-color: transparent;
+  color: white;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+    font-size: 20px;
+}
+
+.social-icon{
+  display: inline-block;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px;
+  border: 2px solid  #e2dede;
+  position:relative;
+  background-color: transparent;
+  transition:all 0.3s ease;
+}
+
+.container-icons a:hover{
+  background-color: #8000ff;
+            border-color: #8000ff;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(128, 0, 255, 0.5);
+}
+
+ .SocialHandle {
+            fill: white;
+            width: 60%;
+            transition: all 0.3s ease;
+        }
+
+        #GmailLogo {
+            fill: white;
+            height: 70%;
+            transition: all 0.3s ease;
+        }
+        
+
+.container-icons a:hover .SocialHandle,
+        .container-icons a:hover #GmailLogo {
+            fill: white;
+        }        
+
+.social-icon svg{
+  width:35px;
+  height:35px;
+  object-fit: contain;
 }
 
 .copyright {
   color:aliceblue;
-  max-width: max-content;
-  margin-inline:auto;
-  margin-block-end:10px;
+
 }
 
 .copyright-link {
@@ -855,21 +934,42 @@ footer {
 .footer-link:is(:hover, :focus) { color: var(--white); }
 
 
- .footer .container {
+ .footer .container-icons {
     display: flex;
-    justify-content: space-around;
+    flex-direction:row;
     align-items: center;
   }
 
   .copyright,
-  .footer-list { margin-inline: 0;
+  .footer-list {
+    margin-inline: 400px;
    }
 
 
+  .footer-bottom{
+    background:#120523;
+    padding:30px 30px 30px 40px;
+    margin:90px 0 -160px 0;
+  }
 
 
 
 
+          /*------------*\
+           Scrolling part
+           \*------------*/
+
+           /* Base scroll animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease-out;
+}
+
+.scroll-reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
