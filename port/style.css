@@ -10,8 +10,7 @@
  html{
   scrollbar-width:none;
   -ms-overflow-style:none;
-  scroll-behavior: smooth;
-   
+  scroll-behavior: smooth;   
 }
 
 :target{
@@ -53,6 +52,8 @@ section{
     /* background-image:url(design.jpg); */
     background-size:cover;
     position:relative;
+
+    overflow-x:hidden;
 }
 nav{
     display:flex;
@@ -1018,6 +1019,10 @@ background: linear-gradient(to top, #321242, #040008); /* W3C, IE 10+/ Edge, Fir
    MOBILE RESPONSIVE
 ========================= */
 
+*{
+    max-width:100%;
+}
+
 @media screen and (max-width:768px){
 
 /* NAVBAR */
@@ -1091,16 +1096,22 @@ nav{
 /* HERO */
 
 .hero{
-    min-height:85vh;
+    justify-content:flex-start !important;
+}
+
+.hero{
+    min-height:75vh !important;
     height:auto;
-    padding:80px 20px 30px;
+    padding:60px 20px 30px !important;
     flex-direction:column;
     text-align:center;
     justify-content:center;
 }
 
 .villan-text{
-    padding:0;
+    padding:0 !important;
+    align-items:center;
+    margin-top:-30px;
 }
 
 strong{
@@ -1144,14 +1155,24 @@ strong{
     flex-direction:column;
     align-items:center;
     text-align:center;
-    gap:30px;
+    gap:25px !important;
 }
 
 .dp img{
     width:220px;
-    height:220px;
-    object-fit:cover;
+    height:auto;
+    max-width:100%;
+    object-fit:contain;
 }
+
+ .dp::before,
+  .dp::after{
+      display:none !important;
+  }
+
+  .dp{
+      margin-top:0 !important;
+  }
 
 .about-content{
     width:100%;
@@ -1164,6 +1185,26 @@ strong{
     font-size:16px !important;
 }
 
+.btn,
+  .btn1{
+      margin:25px auto 0 auto !important;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      width:150px;
+      min-width:150px;
+  }
+
+  .btn2{
+      margin-left:0 !important;
+  }
+
+  .section-divider img{
+      width:85% !important;
+      max-width:280px !important;
+      margin:auto;
+      display:block;
+  }
 /* SKILLS */
 
 .section-skills{
@@ -1221,15 +1262,30 @@ strong{
 /* FOOTER */
 
 .footer{
-    padding:40px 20px;
+    padding:40px 0 0 0 !important;
     text-align:center;
 }
+
+ .footer-bottom{
+      margin:30px 0 0 0 !important;
+      padding:20px !important;
+  }
+
+   .copyright,
+  .footer-list{
+      margin-inline:auto !important;
+  }
 
 .container-icons{
     flex-wrap:wrap;
     justify-content:center;
-    gap:15px;
+    gap:12px;
 }
+
+.social-icon{
+      width:55px;
+      height:55px;
+  }
 
 .follow-text{
     font-size:16px;
@@ -1238,7 +1294,7 @@ strong{
 /* BACK TO TOP */
 
 .scroll{
-    right:15px;
+    right:10px !important;
     bottom:15px;
     font-size:14px;
 }
