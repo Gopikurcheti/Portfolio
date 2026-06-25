@@ -16,18 +16,29 @@
            <!-- header section -->
 
     <header class="header" data-header>
-        <nav>
+    <nav>
+
             <div class="logo">G</div>
-            <div class="menu">
-                <ul class="nav-bar">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    
-                </ul>
-            </div>
-            <a href="#"  class="CV" id="theme-toggle">Dark Mode</a>
+
+<div class="hamburger" id="hamburger">
+    ☰
+</div>
+
+<div class="menu" id="menu">
+
+    <ul class="nav-bar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+    </ul>
+    
+    <a href="#" class="CV mobile-theme" id="theme-toggle">
+    Dark
+    </a>
+
+</div>
+
         </nav>
     </header>
     
@@ -51,10 +62,11 @@
         </h2>
              
         </div>
-        <div class="hero-banner">
-            <img src="Radhachakram.png" id="shield" alt="Celtic shield" class="rotating-shield">
-        </div>
     </section>
+
+    <div class="section-divider">
+    <img src="MH1.png" alt="divider">
+    </div>
 
             <!-- About section -->
 
@@ -71,22 +83,29 @@
             <br>
 
             <p class="section-title" style="font-size:18px;">Hi! My name is Gopi Kurcheti.
-              I’m a Full Stack Java Developer with a <br> strong passion for building modern 
-              and user-friendly web applications.<br> My journey into development started in 
-              2024 when I was experimenting <br> with creating small projects and interactive designs.
+              I’m a Full Stack Java Developer with a strong passion for building modern 
+              and user-friendly web applications.My journey into development started in 
+              2024 when I was experimenting with creating small projects and interactive designs.
             </p>
             <br>
 
-            <p class="section-text" style="font-size:18px;">Instead of just stopping at basic websites, I discovered my real <br> interest in  full stack development — where I could design, code,<br> and bring ideas to life  from start to finish. This opened doors for <br> me to explore Java, Spring Boot, React.js, SQL, and DevOps.
+            <p class="section-text" style="font-size:18px;">Instead of just stopping at basic websites, 
+                I discovered my real interest in  full stack development — where I could design, code, 
+                and bring ideas to life  from start to finish. This opened doors for me to explore Java,
+                 Spring Boot, React.js, SQL, and DevOps.
             </p>
             <br>
-            <p class="section-text" style="font-size:18px;">These days, my main focus is on building scalable and creative <br>applications, coding things from scratch, and crafting designs<br> that feel smooth, engaging, and impactful in the browser.
+            <p class="section-text" style="font-size:18px;">These days, my main focus is on building scalable and creative applications, coding things from scratch, and crafting designs that feel smooth, engaging, and impactful in the browser.
             </p>
           
             <a href="K.Gopi.pdf" download class="btn">Resume</a> 
             </div>
         </div>
     </section>
+
+    <div class="section-divider">
+    <img src="MH1.png" alt="divider">
+    </div>
 
       
 
@@ -131,6 +150,10 @@
         </div>
     </section>
 
+    <div class="section-divider">
+    <img src="MH1.png" alt="divider">
+    </div>
+
             <!-- projects section -->
 
     <section class="projects-section-container" id="projects">
@@ -143,6 +166,35 @@
             </div>
 
             <div class="project-boxes-div">
+
+                 <!------------------------------------------------->
+             <div  data-aos="fade-up" class="project-boxes-wrapper">
+                    <div class="project-box project-box2" id="atomic-asher">
+                        <div class="info-div">
+                            <img src="next.png" class="faviconforProject" >
+                            <h3>Next Hire - Job Board</h3>
+                            <p class="projectDescription">
+                                Developed an interactive chess game featuring drag-and-drop moves, legal move validation, and a two-player mode, built with smooth animations and a fully responsive user interface for all devices.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://next-hire-frontend-one.vercel.app/" target="_blank" class="cta" arial-label="Visit the Quantam chess game website">
+                                    <span>Live view</span>
+                                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                                        <path d="M1,5 L11,5"></path>
+                                        <polyline points="8 1 12 5 8 9"></polyline>
+                                    </svg>
+                                </a>
+                    </div>
+                </div>
+                        <div class="image-div">
+                           <img src="nexthire.png" alt="Seat booking website preview">
+                        </div>
+                    </div>
+                </div>
+
+                <!------------------------------------------------->
+
+
                 <div  data-aos="fade-up" class="project-boxes-wrapper">
                     <div class="project-box project-box2" id="atomic-asher">
                         <div class="info-div">
@@ -176,7 +228,7 @@
                             <img src="chess.png" class="faviconforProject" >
                             <h3>Quantum Chess Game</h3>
                             <p class="projectDescription">
-                                Chess game with drag-and-drop moves, legal validation, and two-player mode.  Built with clean animations and a responsive UI for all devices.
+                                Developed an interactive chess game featuring drag-and-drop moves, legal move validation, and a two-player mode, built with smooth animations and a fully responsive user interface for all devices.
                             </p>
                             <div class="project-buttons">
                                 <a href="https://q-chess-game-cjn4.vercel.app/" target="_blank" class="cta" arial-label="Visit the Quantam chess game website">
@@ -203,7 +255,7 @@
                             <img src="day.png" class="faviconforProject" >
                             <h3>Quantum Chess Game</h3>
                             <p class="projectDescription">
-                                 Real-time weather for any city using API data. Built with React and a responsive, user-friendly interface.
+                                 Real-time weather application that displays weather data for any city using a public API, built with React.js and a responsive, user-friendly interface supporting dynamic city search across both mobile and desktop devices.
                             </p>
                             <div class="project-buttons">
                                 <a href="https://weather-phi-ochre.vercel.app/" target="_blank" class="cta" arial-label="Visit the Quantam chess game website">
@@ -224,9 +276,42 @@
                 <!------------------------------------------------->
 
 
+                 <!------------------------------------------------->
+             <div  data-aos="fade-up" class="project-boxes-wrapper">
+                    <div class="project-box project-box2" id="atomic-asher">
+                        <div class="info-div">
+                            <img src="rupee.png" class="faviconforProject" >
+                            <h3>Currency Converter</h3>
+                            <p class="projectDescription">
+                                 Implemented dynamic currency selection and instant conversion using external REST API.
+                                 Developed a responsive currency converter using React and Fetch API with real-time exchange rates.
+                            </p>
+                            <div class="project-buttons">
+                                <a href="https://currencyconverter-five-phi.vercel.app/" target="_blank" class="cta" arial-label="Visit the Quantam chess game website">
+                                    <span>Live view</span>
+                                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                                        <path d="M1,5 L11,5"></path>
+                                        <polyline points="8 1 12 5 8 9"></polyline>
+                                    </svg>
+                                </a>
+                    </div>
+                </div>
+                        <div class="image-div">
+                           <img src="currency.png" alt="Seat booking website preview">
+                        </div>
+                    </div>
+                </div>
+
+                <!------------------------------------------------->
+
+
             </div>
         </div>
     </section>
+
+    <div class="section-divider">
+    <img src="MH1.png" alt="divider">
+    </div>
 </main>
 
             <!-- footer section -->

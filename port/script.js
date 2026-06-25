@@ -24,12 +24,18 @@ themeToggle.addEventListener("click", function (e) {
 
   // Change button text dynamically
   if (document.body.classList.contains("dark-mode")) {
-    themeToggle.textContent = "Light Mode";
+    themeToggle.textContent = "Light";
   } else {
-    themeToggle.textContent = "Dark Mode";
+    themeToggle.textContent = "Dark";
   }
 });
 
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
+
+hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
 
 const sections = document.querySelectorAll(
   "#hero, #about, #skills, #projects, #contact"
